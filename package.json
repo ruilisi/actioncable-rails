@@ -21,7 +21,7 @@
     "es6"
   ],
   "author": "hophacker",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/paiyou-network/actioncable-rails/issues"
   },
