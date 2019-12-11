@@ -4,6 +4,7 @@
 
 Action Cable resolves this by seamlessly integrating WebSockets with your Rails application, which allows for real-time connection to be written in Ruby, while still being performant and scalable. 
 
+While the official implementation of `actioncable.js` 
 This project offers several things which the official implementation of [actioncable.js](https://github.com/rails/rails/tree/master/actioncable/app/javascript/action_cable] does not offer:
 
 * Configurations for compiling the `official` implementation is provided, so that any developer can fork this repo and tweak the code, finally create their own version of `actioncable.js`.
@@ -15,6 +16,7 @@ This project offers several things which the official implementation of [actionc
     ...
   },
 ```
+* [Jwt](https://jwt.io/) authentication  
 * Quick updates of optimizations and bug fixes of the official one since this project stays standalone
 
 ## Usage

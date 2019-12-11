@@ -1,4 +1,5 @@
 const path = require("path")
+const webpack = require("webpack")
 const baseConfig = require("./webpack.base")
 
 
@@ -7,6 +8,7 @@ const ROOT_DIR = path.resolve(__dirname, "..")
 
 module.exports = {
   ...baseConfig,
+  mode: "development",
   devServer: {
     disableHostCheck: true,
     progress: true,
@@ -23,4 +25,9 @@ module.exports = {
     hot: false,
     inline: false,
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("production"),
+    }),
+  ],
 }

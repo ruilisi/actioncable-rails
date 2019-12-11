@@ -1,8 +1,6 @@
 const path = require("path")
 
 const ROOT_DIR = path.resolve(__dirname, "..")
-const webpack = require("webpack")
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin")
 
 module.exports = {
   entry: "./lib/index.js",
@@ -19,27 +17,11 @@ module.exports = {
         test: /\.(js)$/,
         include: [path.resolve(ROOT_DIR, "lib")],
         exclude: /(node_modules)/,
-        use: ["babel-loader", "eslint-loader"],
+        use: ["babel-loader"],
       },
     ],
   },
-  plugins: [
-    new UglifyJSPlugin({
-      sourceMap: true,
-      uglifyOptions: {
-        output: {
-          comments: false,
-          beautify: false,
-        },
-      },
-    }),
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production"),
-    }),
-  ],
   stats: {
     colors: true,
   },
-  mode: "production",
-  devtool: "source-map",
 }
