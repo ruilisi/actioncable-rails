@@ -1,0 +1,41 @@
+{
+  "name": "actioncable-rails",
+  "version": "1.0.0",
+  "description": "actioncable rewritten in es6 with customizable interface",
+  "main": "build/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --optimize-minimize --config config/webpack.config.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paiyou-network/actioncable-rails.git"
+  },
+  "keywords": [
+    "actioncable",
+    "websocket",
+    "rails",
+    "es6"
+  ],
+  "author": "hophacker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paiyou-network/actioncable-rails/issues"
+  },
+  "homepage": "https://github.com/paiyou-network/actioncable-rails#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/runtime": "^7.7.6",
+    "babel-loader": "^8.0.6",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {}
+}
